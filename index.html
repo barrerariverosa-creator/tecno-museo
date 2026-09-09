@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Interactivo - Historia de las PC</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- SECCIÓN 1: HEADER (Encabezado principal)   -->
+    <!-- ========================================= -->
+    <header>
+        <h1>🖥️ MUSEO INTERACTIVO</h1>
+        <img src="./imagenes/logo.png" alt="">
+        <p class="subtitulo">Historia de las Computadoras Personales</p>
+        <p class="frase">"Desde el ábaco hasta la inteligencia artificial"</p>
+        <!-- Botón que lleva a la línea de tiempo -->
+        <a href="#nav-tiempo" class="boton-explorar">🚀 Explorar museo</a>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- SECCIÓN 2: NAVEGACIÓN (Línea de tiempo)    -->
+    <!-- ========================================= -->
+    <nav id="nav-tiempo">
+        <a href="#gen1">1ª Gen<br><span>1971-1980</span></a>
+        <a href="#gen2">2ª Gen<br><span>1981-1990</span></a>
+        <a href="#gen3">3ª Gen<br><span>1991-2000</span></a>
+        <a href="#gen4">4ª Gen<br><span>2001-2010</span></a>
+        <a href="#gen5">5ª Gen<br><span>2011-act.</span></a>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- SECCIÓN 3: CONTENIDO DE CADA GENERACIÓN    -->
+    <!-- ========================================= -->
+    <main>
+
+        <!-- GENERACIÓN 1 -->
+        <section id="gen1" class="generacion">
+            <h2>🖥️ Primera Generación <span>(1971 - 1980)</span></h2>
+            <div class="contenido-gen">
+                <img src="./imagenes/IBM5100.jpg" alt="IBM 5100">
+                <div class="texto-gen">
+                    <p>Las primeras computadoras personales eran grandes, costosas y tenían poca capacidad de almacenamiento. Eran usadas principalmente por empresas y universidades.</p>
+                    <ul>
+                        <li><strong>Características:</strong></li>
+                        <li>🔹 Usaban cintas magnéticas</li>
+                        <li>🔹 Tenían pantallas pequeñas</li>
+                        <li>🔹 Solo expertos podían usarlas</li>
+                    </ul>
+                    <!-- Botón para mostrar dato curioso -->
+                    <button onclick="mostrarInfo('info1')">📚 Ver dato curioso</button>
+                    <div id="info1" class="info-extra" style="display:none;">
+                        💡 <strong>¡Sabías que!</strong> La IBM 5100 pesaba 25 kg y costaba alrededor de $20,000 dólares.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERACIÓN 2 -->
+        <section id="gen2" class="generacion">
+            <h2>🖥️ Segunda Generación <span>(1981 - 1990)</span></h2>
+            <div class="contenido-gen">
+                <img src="./imagenes/IBM5150.jpg" alt="IBM PC 5150">
+                <div class="texto-gen">
+                    <p>Aparecen las primeras PC con sistema operativo MS-DOS y el mouse. Se populariza el uso de computadores en oficinas y hogares.</p>
+                    <ul>
+                        <li><strong>Características:</strong></li>
+                        <li>🔹 Primeros discos duros</li>
+                        <li>🔹 Teclado y mouse básicos</li>
+                        <li>🔹 Mayor almacenamiento</li>
+                    </ul>
+                    <button onclick="mostrarInfo('info2')">📚 Ver dato curioso</button>
+                    <div id="info2" class="info-extra" style="display:none;">
+                        💡 <strong>¡Sabías que!</strong> El IBM PC 5150 de 1981 costaba $1,565 dólares y tenía solo 16KB de memoria RAM.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERACIÓN 3 -->
+        <section id="gen3" class="generacion">
+            <h2>🖥️ Tercera Generación <span>(1991 - 2000)</span></h2>
+            <div class="contenido-gen">
+                <img src="./imagenes/imac_bondi_blue.jpg" alt="iMac G3">
+                <div class="texto-gen">
+                    <p>Llega la era de Windows 95, Internet y los CD-ROM. Las PC se vuelven más coloridas, rápidas y accesibles para el público general.</p>
+                    <ul>
+                        <li><strong>Características:</strong></li>
+                        <li>🔹 Procesadores más rápidos</li>
+                        <li>🔹 Gráficos mejorados</li>
+                        <li>🔹 Conexión a Internet</li>
+                    </ul>
+                    <button onclick="mostrarInfo('info3')">📚 Ver dato curioso</button>
+                    <div id="info3" class="info-extra" style="display:none;">
+                        💡 <strong>¡Sabías que!</strong> El iMac G3 de 1998 fue el primer computador en tener colores llamativos y vendió más de 6 millones de unidades.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERACIÓN 4 -->
+        <section id="gen4" class="generacion">
+            <h2>🖥️ Cuarta Generación <span>(2001 - 2010)</span></h2>
+            <div class="contenido-gen">
+                <img src="./imagenes/macbook-pro.webp" alt="MacBook Pro">
+                <div class="texto-gen">
+                    <p>Aparecen las laptops, WiFi, redes sociales y el almacenamiento en la nube. Las PC se vuelven portátiles y más potentes.</p>
+                    <ul>
+                        <li><strong>Características:</strong></li>
+                        <li>🔹 Computadores portátiles</li>
+                        <li>🔹 Conexión inalámbrica</li>
+                        <li>🔹 Mayor capacidad de almacenamiento</li>
+                    </ul>
+                    <button onclick="mostrarInfo('info4')">📚 Ver dato curioso</button>
+                    <div id="info4" class="info-extra" style="display:none;">
+                        💡 <strong>¡Sabías que!</strong> El primer MacBook Pro de 2006 era tan potente que se usaba para editar películas de Hollywood.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERACIÓN 5 -->
+        <section id="gen5" class="generacion">
+            <h2>🖥️ Quinta Generación <span>(2011 - actualidad)</span></h2>
+            <div class="contenido-gen">
+                <img src="./imagenes/microsoft_surface_pro.webp" alt="Microsoft Surface">
+                <div class="texto-gen">
+                    <p>La era de las tabletas, pantallas táctiles, inteligencia artificial y computación en la nube. Las PC son ultrafinas y potentes.</p>
+                    <ul>
+                        <li><strong>Características:</strong></li>
+                        <li>🔹 Pantallas táctiles</li>
+                        <li>🔹 Reconocimiento de voz</li>
+                        <li>🔹 Inteligencia artificial</li>
+                    </ul>
+                    <button onclick="mostrarInfo('info5')">📚 Ver dato curioso</button>
+                    <div id="info5" class="info-extra" style="display:none;">
+                        💡 <strong>¡Sabías que!</strong> Hoy en día, un teléfono inteligente tiene más poder de cómputo que el computador que llevó al hombre a la Luna en 1969.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- SECCIÓN 4: JUEGO INTERACTIVO              -->
+        <!-- ========================================= -->
+        <section id="juego" class="juego">
+            <h2>🎮 ¡PON A PRUEBA TU CONOCIMIENTO!</h2>
+            <p>Une cada característica con su generación correcta:</p>
+
+            <div id="preguntas-juego">
+                <!-- Las preguntas se generan desde JavaScript -->
+            </div>
+
+            <div class="botones-juego">
+                <button onclick="verificarRespuestas()">✅ Verificar respuestas</button>
+                <button onclick="reiniciarJuego()">🔄 Reiniciar juego</button>
+            </div>
+
+            <div id="resultado-juego">
+                <!-- Aquí se muestra el resultado -->
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- SECCIÓN 5: ESPACIO DOCENTE                -->
+        <!-- ========================================= -->
+        <section id="docente" class="docente">
+            <h2>👨‍🏫 Guía para el docente</h2>
+            <div class="guia">
+                <h3>¿Cómo usar este museo en clase?</h3>
+                <ol>
+                    <li><strong>Exploración libre (15 min):</strong> Deja que los estudiantes naveguen por las generaciones a su propio ritmo.</li>
+                    <li><strong>Juego interactivo (10 min):</strong> Pide que jueguen en parejas o grupos para reforzar lo aprendido.</li>
+                    <li><strong>Actividad en clase (10 min):</strong> Que dibujen cómo creen que serán las PC del futuro.</li>
+                </ol>
+                <p><strong>Objetivos de aprendizaje:</strong></p>
+                <ul>
+                    <li>✅ Reconocer la evolución de las computadoras personales</li>
+                    <li>✅ Identificar avances tecnológicos clave</li>
+                    <li>✅ Relacionar tecnología del pasado con la actual</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================= -->
+    <!-- SECCIÓN 6: FOOTER (Pie de página)          -->
+    <!-- ========================================= -->
+    <footer>
+        <p>Proyecto de Grado - Técnicos en Sistemas Teleinformáticos</p>
+        <p>Alejandro Barrera Riveros - José de Jesús Martínez Santiago</p>
+        <p id="fecha-actual"></p>
+        <p>🖥️ Museo Interactivo - Historia de las PC</p>
+    </footer>
+
+    <!-- Enlazamos el archivo de JavaScript al final para que cargue después del HTML -->
+    <script src="script.js"></script>
+
+</body>
+</html>
