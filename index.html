@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo Interactivo - Historia de las PC</title>
+    <link rel="icon" href="./imagenes/logo.png" type="image/png">
+    <title>Museo Digital - Historia de las PC</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -12,29 +13,49 @@
     <!-- SECCIÓN 1: HEADER (Encabezado principal)   -->
     <!-- ========================================= -->
     <header>
-        <h1>🖥️ MUSEO INTERACTIVO</h1>
-        <img src="./imagenes/logo.png" alt="">
+        <h1>🖥️ MUSEO DIGITAL</h1>
+        <img src="./imagenes/logo.png" alt="Logo del Museo Digital">
         <p class="subtitulo">Historia de las Computadoras Personales</p>
         <p class="frase">"Desde el ábaco hasta la inteligencia artificial"</p>
-        <!-- Botón que lleva a la línea de tiempo -->
-        <a href="#nav-tiempo" class="boton-explorar">🚀 Explorar museo</a>
     </header>
 
     <!-- ========================================= -->
-    <!-- SECCIÓN 2: NAVEGACIÓN (Línea de tiempo)    -->
+    <!-- SECCIÓN 2: NAVEGACIÓN (Menú principal)     -->
     <!-- ========================================= -->
-    <nav id="nav-tiempo">
-        <a href="#gen1">1ª Gen<br><span>1971-1980</span></a>
-        <a href="#gen2">2ª Gen<br><span>1981-1990</span></a>
-        <a href="#gen3">3ª Gen<br><span>1991-2000</span></a>
-        <a href="#gen4">4ª Gen<br><span>2001-2010</span></a>
-        <a href="#gen5">5ª Gen<br><span>2011-act.</span></a>
+    <nav id="menu-principal">
+        <a href="#inicio">🏠 Inicio</a>
+        <a href="#gen1">1ª Gen</a>
+        <a href="#gen2">2ª Gen</a>
+        <a href="#gen3">3ª Gen</a>
+        <a href="#gen4">4ª Gen</a>
+        <a href="#gen5">5ª Gen</a>
+        <a href="#juegos">🎮 Juegos</a>
+        <a href="#docente">👨‍🏫 Docente</a>
     </nav>
 
-    <!-- ========================================= -->
-    <!-- SECCIÓN 3: CONTENIDO DE CADA GENERACIÓN    -->
-    <!-- ========================================= -->
     <main>
+
+        <!-- ========================================= -->
+        <!-- SECCIÓN 3: INICIO (Bienvenida)             -->
+        <!-- ========================================= -->
+        <section id="inicio" class="inicio">
+            <h2>🏠 ¡Bienvenido al Museo Digital!</h2>
+            <div class="contenido-inicio">
+                <p>Este museo digital te llevará a un viaje por la historia de las <strong>computadoras personales (PC)</strong>, desde sus inicios en 1971 hasta la actualidad.</p>
+                <p>Aquí podrás:</p>
+                <ul>
+                    <li>📖 Conocer las 5 generaciones de computadoras personales</li>
+                    <li>🖼️ Ver imágenes de los computadores más importantes</li>
+                    <li>💡 Descubrir datos curiosos de cada época</li>
+                    <li>🎮 Jugar y poner a prueba lo que aprendiste</li>
+                </ul>
+                <p class="instruccion">👉 Usa el menú de arriba para navegar o desplázate hacia abajo para explorar.</p>
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- SECCIÓN 4: CONTENIDO DE CADA GENERACIÓN    -->
+        <!-- ========================================= -->
 
         <!-- GENERACIÓN 1 -->
         <section id="gen1" class="generacion">
@@ -49,7 +70,6 @@
                         <li>🔹 Tenían pantallas pequeñas</li>
                         <li>🔹 Solo expertos podían usarlas</li>
                     </ul>
-                    <!-- Botón para mostrar dato curioso -->
                     <button onclick="mostrarInfo('info1')">📚 Ver dato curioso</button>
                     <div id="info1" class="info-extra" style="display:none;">
                         💡 <strong>¡Sabías que!</strong> La IBM 5100 pesaba 25 kg y costaba alrededor de $20,000 dólares.
@@ -143,36 +163,80 @@
         </section>
 
         <!-- ========================================= -->
-        <!-- SECCIÓN 4: JUEGO INTERACTIVO              -->
+        <!-- SECCIÓN 5: JUEGOS (3 juegos)               -->
         <!-- ========================================= -->
-        <section id="juego" class="juego">
-            <h2>🎮 ¡PON A PRUEBA TU CONOCIMIENTO!</h2>
-            <p>Une cada característica con su generación correcta:</p>
+        <section id="juegos" class="juegos">
+            <h2>🎮 ZONA DE JUEGOS</h2>
+            <p class="instruccion-juegos">Pon a prueba lo que aprendiste con estos 3 juegos:</p>
 
-            <div id="preguntas-juego">
-                <!-- Las preguntas se generan desde JavaScript -->
+            <!-- JUEGO 1: ASOCIA LA CARACTERÍSTICA -->
+            <div class="juego-contenedor">
+                <h3>🎯 Juego 1: Asocia la característica</h3>
+                <p>Une cada característica con su generación correcta:</p>
+                <div id="preguntas-juego1"></div>
+                <div class="botones-juego">
+                    <button onclick="verificarJuego1()">✅ Verificar</button>
+                    <button onclick="reiniciarJuego1()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-juego1" class="resultado"></div>
             </div>
 
-            <div class="botones-juego">
-                <button onclick="verificarRespuestas()">✅ Verificar respuestas</button>
-                <button onclick="reiniciarJuego()">🔄 Reiniciar juego</button>
+            <!-- JUEGO 2: ADIVINA EL AÑO -->
+            <div class="juego-contenedor">
+                <h3>❓ Juego 2: Adivina el año</h3>
+                <p>¿En qué generación ocurrió cada avance?</p>
+                <div id="preguntas-juego2"></div>
+                <div class="botones-juego">
+                    <button onclick="verificarJuego2()">✅ Verificar</button>
+                    <button onclick="reiniciarJuego2()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-juego2" class="resultado"></div>
             </div>
 
-            <div id="resultado-juego">
-                <!-- Aquí se muestra el resultado -->
+            <!-- JUEGO 3: MEMORIA DE LAS PC -->
+            <div class="juego-contenedor">
+                <h3>🧠 Juego 3: Memoria de las PC</h3>
+                <p>Encuentra las parejas de conceptos relacionados:</p>
+                <div id="tablero-memoria" class="tablero-memoria"></div>
+                <div class="botones-juego">
+                    <button onclick="reiniciarMemoria()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-memoria" class="resultado"></div>
+            </div>
+
+            <!-- JUEGO 4: ROMPECHEZAS -->
+            <div class="juego-contenedor">
+                <h3>🧩 Juego 4: Rompecabezas de imágenes</h3>
+                <p>Haz clic en dos piezas para intercambiarlas y armar la imagen del computador:</p>
+                <div id="rompecabezas" class="rompecabezas"></div>
+                <div class="botones-juego">
+                    <button onclick="reiniciarRompecabezas()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-rompecabezas" class="resultado"></div>
+            </div>
+            
+            <!-- JUEGO 5: CONECTA LAS PAREJAS -->
+            <div class="juego-contenedor">
+                <h3>🔗 Juego 5: Conecta las parejas</h3>
+                <p>Haz clic en un computador y luego en su año correspondiente:</p>
+                <div id="conecta-juego" class="conecta-juego"></div>
+                <div class="botones-juego">
+                    <button onclick="reiniciarConecta()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-conecta" class="resultado"></div>
             </div>
         </section>
 
         <!-- ========================================= -->
-        <!-- SECCIÓN 5: ESPACIO DOCENTE                -->
+        <!-- SECCIÓN 6: ESPACIO DOCENTE                -->
         <!-- ========================================= -->
         <section id="docente" class="docente">
             <h2>👨‍🏫 Guía para el docente</h2>
             <div class="guia">
-                <h3>¿Cómo usar este museo en clase?</h3>
+                <h3>¿Cómo usar este museo digital en clase?</h3>
                 <ol>
                     <li><strong>Exploración libre (15 min):</strong> Deja que los estudiantes naveguen por las generaciones a su propio ritmo.</li>
-                    <li><strong>Juego interactivo (10 min):</strong> Pide que jueguen en parejas o grupos para reforzar lo aprendido.</li>
+                    <li><strong>Juegos interactivos (15 min):</strong> Pide que jueguen en parejas o grupos para reforzar lo aprendido.</li>
                     <li><strong>Actividad en clase (10 min):</strong> Que dibujen cómo creen que serán las PC del futuro.</li>
                 </ol>
                 <p><strong>Objetivos de aprendizaje:</strong></p>
@@ -187,16 +251,15 @@
     </main>
 
     <!-- ========================================= -->
-    <!-- SECCIÓN 6: FOOTER (Pie de página)          -->
+    <!-- SECCIÓN 7: FOOTER (Pie de página)          -->
     <!-- ========================================= -->
     <footer>
         <p>Proyecto de Grado - Técnicos en Sistemas Teleinformáticos</p>
         <p>Alejandro Barrera Riveros - José de Jesús Martínez Santiago</p>
         <p id="fecha-actual"></p>
-        <p>🖥️ Museo Interactivo - Historia de las PC</p>
+        <p>🖥️ Museo Digital - Historia de las PC</p>
     </footer>
 
-    <!-- Enlazamos el archivo de JavaScript al final para que cargue después del HTML -->
     <script src="script.js"></script>
 
 </body>
