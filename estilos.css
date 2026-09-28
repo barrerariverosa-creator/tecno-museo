@@ -211,31 +211,6 @@ button:hover {
     margin-bottom: 1.5rem;
 }
 
-.pregunta-item {
-    background: #34495e;
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.pregunta-item .descripcion {
-    flex: 1;
-    font-weight: bold;
-    min-width: 150px;
-}
-
-.pregunta-item select {
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    border: none;
-    background: #ecf0f1;
-    font-weight: bold;
-    min-width: 130px;
-}
-
 .botones-juego {
     display: flex;
     gap: 1rem;
@@ -476,6 +451,7 @@ html {
 
 .juego-contenedor > p {
     margin-bottom: 1rem;
+    color: #ecf0f1; 
 }
 
 #preguntas-juego1, #preguntas-juego2 {
@@ -485,7 +461,8 @@ html {
 }
 
 .pregunta-item {
-    background: #2c3e50;
+    background: #1a2a3a;   
+    border: 1px solid #4a6278;
     padding: 0.8rem 1.2rem;
     border-radius: 10px;
     display: flex;
@@ -498,6 +475,7 @@ html {
     flex: 1;
     font-weight: bold;
     min-width: 150px;
+    color: #ecf0f1; 
 }
 
 .pregunta-item select {
@@ -672,4 +650,265 @@ html {
     background: #2ecc71;
     cursor: default;
     opacity: 0.8;
+}
+
+/* ========================================== */
+/* SISTEMA DE PESTAÑAS                       */
+/* ========================================== */
+nav#menu-pestanas {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    background-color: #2c3e50;
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tab-btn {
+    background-color: #34495e;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-family: inherit;
+}
+
+.tab-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.tab-btn.activo {
+    background-color: #e67e22;
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+.pestana {
+    display: none;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease;
+}
+
+.pestana.activa {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pestana h2 {
+    color: #1a2a3a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* ========================================== */
+/* DATOS CURIOSOS (PESTAÑA)                  */
+/* ========================================== */
+.lista-datos {
+    display: grid;
+    gap: 1rem;
+}
+
+.dato-curioso {
+    background: #fef9e7;
+    padding: 1.2rem;
+    border-left: 5px solid #f1c40f;
+    border-radius: 8px;
+}
+
+.dato-curioso h3 {
+    color: #b7950b;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================== */
+/* ACERCA DE                                 */
+/* ========================================== */
+.acerca {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.acerca p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+/* ========================================== */
+/* SOPA DE LETRAS                            */
+/* ========================================== */
+.sopa-letras {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3px;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+.celda-sopa {
+    background: #2c3e50;
+    color: white;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+}
+
+.celda-sopa:hover {
+    background: #34495e;
+}
+
+.celda-sopa.seleccionada {
+    background: #e67e22;
+}
+
+.celda-sopa.encontrada {
+    background: #2ecc71;
+}
+
+/* ========================================== */
+/* LÍNEA DE TIEMPO                           */
+/* ========================================== */
+.linea-tiempo-juego {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+.evento-tiempo {
+    background: #2c3e50;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.evento-tiempo:hover {
+    background: #34495e;
+}
+
+.evento-tiempo .flechas {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.evento-tiempo .flechas button {
+    background: #e67e22;
+    border: none;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.evento-tiempo .flechas button:hover {
+    background: #d35400;
+}
+
+/* ========================================== */
+/* AJUSTES AL HEADER (sin imagen)             */
+/* ========================================== */
+header img {
+    display: none; /* Ocultamos la imagen del header */
+}
+
+/* ========================================== */
+/* TABLA COMPARATIVA                         */
+/* ========================================== */
+.tabla-comparativa {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.tabla-comparativa h3 {
+    text-align: center;
+    color: #1a2a3a;
+    margin-bottom: 1rem;
+}
+
+.tabla-comparativa table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tabla-comparativa th {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.tabla-comparativa td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 0.9rem;
+}
+
+.tabla-comparativa tbody tr:hover {
+    background: #f9f6f2;
+}
+
+.tabla-comparativa tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================== */
+/* LÍNEA DE TIEMPO EVOLUCIÓN                 */
+/* ========================================== */
+.linea-tiempo-evolucion {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fef9e7, #fff);
+    border-radius: 12px;
+    border-left: 5px solid #f1c40f;
+}
+
+.linea-tiempo-evolucion h3 {
+    text-align: center;
+    color: #b7950b;
+    margin-bottom: 1rem;
+}
+
+.frase-evolucion {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #1a2a3a;
+    font-weight: 500;
 }

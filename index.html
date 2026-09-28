@@ -10,35 +10,32 @@
 <body>
 
     <!-- ========================================= -->
-    <!-- SECCIÓN 1: HEADER (Encabezado principal)   -->
+    <!-- HEADER (sin imagen, solo texto)            -->
     <!-- ========================================= -->
     <header>
         <h1>🖥️ MUSEO DIGITAL</h1>
-        <img src="./imagenes/logo.png" alt="Logo del Museo Digital">
         <p class="subtitulo">Historia de las Computadoras Personales</p>
         <p class="frase">"Desde el ábaco hasta la inteligencia artificial"</p>
     </header>
 
     <!-- ========================================= -->
-    <!-- SECCIÓN 2: NAVEGACIÓN (Menú principal)     -->
+    <!-- MENÚ DE PESTAÑAS                          -->
     <!-- ========================================= -->
-    <nav id="menu-principal">
-        <a href="#inicio">🏠 Inicio</a>
-        <a href="#gen1">1ª Gen</a>
-        <a href="#gen2">2ª Gen</a>
-        <a href="#gen3">3ª Gen</a>
-        <a href="#gen4">4ª Gen</a>
-        <a href="#gen5">5ª Gen</a>
-        <a href="#juegos">🎮 Juegos</a>
-        <a href="#docente">👨‍🏫 Docente</a>
+    <nav id="menu-pestanas">
+        <button class="tab-btn activo" onclick="cambiarPestana('inicio', this)">🏠 Inicio</button>
+        <button class="tab-btn" onclick="cambiarPestana('generaciones', this)">📜 Generaciones</button>
+        <button class="tab-btn" onclick="cambiarPestana('juegos', this)">🎮 Juegos</button>
+        <button class="tab-btn" onclick="cambiarPestana('datos', this)">📚 Datos Curiosos</button>
+        <button class="tab-btn" onclick="cambiarPestana('docente', this)">👨‍🏫 Docente</button>
+        <button class="tab-btn" onclick="cambiarPestana('acerca', this)">ℹ️ Acerca de</button>
     </nav>
 
     <main>
 
         <!-- ========================================= -->
-        <!-- SECCIÓN 3: INICIO (Bienvenida)             -->
+        <!-- PESTAÑA 1: INICIO                          -->
         <!-- ========================================= -->
-        <section id="inicio" class="inicio">
+        <section id="tab-inicio" class="pestana activa">
             <h2>🏠 ¡Bienvenido al Museo Digital!</h2>
             <div class="contenido-inicio">
                 <p>Este museo digital te llevará a un viaje por la historia de las <strong>computadoras personales (PC)</strong>, desde sus inicios en 1971 hasta la actualidad.</p>
@@ -47,131 +44,264 @@
                     <li>📖 Conocer las 5 generaciones de computadoras personales</li>
                     <li>🖼️ Ver imágenes de los computadores más importantes</li>
                     <li>💡 Descubrir datos curiosos de cada época</li>
-                    <li>🎮 Jugar y poner a prueba lo que aprendiste</li>
+                    <li>🎮 Jugar y poner a prueba lo que aprendiste con 7 juegos</li>
+                    <li>👨‍🏫 Usar la guía docente si eres profesor</li>
                 </ul>
-                <p class="instruccion">👉 Usa el menú de arriba para navegar o desplázate hacia abajo para explorar.</p>
+                <p class="instruccion">👉 Usa el menú de arriba para navegar entre las pestañas.</p>
             </div>
         </section>
 
         <!-- ========================================= -->
-        <!-- SECCIÓN 4: CONTENIDO DE CADA GENERACIÓN    -->
+<!-- PESTAÑA 2: GENERACIONES                    -->
+<!-- ========================================= -->
+<section id="tab-generaciones" class="pestana">
+    <h2>📜 Las 5 Generaciones de las PC</h2>
+
+    <!-- GENERACIÓN 1 -->
+    <div class="generacion">
+        <h3>🖥️ Primera Generación: Los comienzos <span>(1970 - 1979)</span></h3>
+        <div class="contenido-gen">
+            <img src="./imagenes/IBM5100.jpg" alt="Primera Generación">
+            <div class="texto-gen">
+                <p>La primera generación de computadoras personales comenzó cuando los avances en electrónica permitieron reducir el tamaño de los computadores. Uno de los cambios más importantes fue la creación del <strong>microprocesador</strong>, que permitió reunir gran parte de las funciones de procesamiento en un pequeño circuito.</p>
+                <p>En 1971, Intel presentó el <strong>4004</strong>, uno de los primeros microprocesadores comerciales. Durante esta época aparecieron computadores dirigidos principalmente a aficionados, estudiantes y personas interesadas en aprender programación. Muchos equipos se vendían como <strong>kits</strong> que el usuario debía ensamblar.</p>
+                
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>🔹 Utilizaban microprocesadores</li>
+                    <li>🔹 Tenían poca memoria</li>
+                    <li>🔹 El almacenamiento era muy limitado</li>
+                    <li>🔹 Algunos no tenían monitor ni teclado incorporados</li>
+                    <li>🔹 Podían conectarse a televisores</li>
+                    <li>🔹 La programación era una actividad muy importante</li>
+                    <li>🔹 Eran utilizados para aprender electrónica, programación y realizar cálculos</li>
+                </ul>
+                
+                <p><strong>Computadoras importantes:</strong></p>
+                <ul>
+                    <li>🖥️ <strong>Altair 8800 (1975):</strong> Uno de los primeros computadores personales ampliamente conocidos. Se comercializó como un kit.</li>
+                    <li>🖥️ <strong>Apple I (1976):</strong> Desarrollado por Steve Wozniak y comercializado junto con Steve Jobs.</li>
+                    <li>🖥️ <strong>Apple II (1977):</strong> Un computador mucho más completo que tuvo gran importancia en la expansión de la computación personal.</li>
+                </ul>
+                
+                <p><strong>¿Qué aportó esta generación?</strong> Iniciar la era de la computadora personal, desarrollar la programación doméstica, los primeros videojuegos para computadores y nuevos dispositivos de almacenamiento.</p>
+                
+                <button onclick="abrirDatoCurioso('dato1')">📚 Ver dato curioso</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERACIÓN 2 -->
+    <div class="generacion">
+        <h3>🖥️ Segunda Generación: La popularización <span>(1980 - 1989)</span></h3>
+        <div class="contenido-gen">
+            <img src="./imagenes/IBM5150.jpg" alt="Segunda Generación">
+            <div class="texto-gen">
+                <p>Durante los años 80, las computadoras personales tuvieron un crecimiento muy importante. Los fabricantes comenzaron a crear equipos destinados a <strong>empresas, colegios y hogares</strong>, no solamente a aficionados.</p>
+                <p>Los procesadores fueron mejorando y aparecieron equipos con mayor memoria y capacidad de almacenamiento. También se desarrollaron <strong>sistemas operativos</strong> que facilitaron el manejo de los computadores. Uno de los acontecimientos más importantes fue el lanzamiento del <strong>IBM PC en 1981</strong>.</p>
+                
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>🔹 Procesadores más rápidos</li>
+                    <li>🔹 Mayor memoria RAM</li>
+                    <li>🔹 Disquetes para guardar información</li>
+                    <li>🔹 Aparición de discos duros en computadores personales</li>
+                    <li>🔹 Monitores con mejores gráficos</li>
+                    <li>🔹 Mayor cantidad de programas</li>
+                    <li>🔹 Desarrollo de videojuegos</li>
+                    <li>🔹 Uso de sistemas operativos como MS-DOS</li>
+                    <li>🔹 Mayor presencia de computadores en oficinas y colegios</li>
+                    <li>🔹 Comienzo de interfaces gráficas más fáciles de utilizar</li>
+                </ul>
+                
+                <p><strong>Computadoras importantes:</strong></p>
+                <ul>
+                    <li>🖥️ <strong>IBM PC (1981):</strong> Se convirtió en una referencia para numerosos computadores compatibles.</li>
+                    <li>🖥️ <strong>Commodore 64 (1982):</strong> Tuvo gran popularidad en los hogares y fue utilizado para programación y videojuegos.</li>
+                    <li>🖥️ <strong>Macintosh (1984):</strong> Apple presentó una computadora que utilizaba una interfaz gráfica y un mouse.</li>
+                </ul>
+                
+                <p><strong>¿Qué aportó esta generación?</strong> Ayudó a convertir el computador en una herramienta para trabajar, estudiar, escribir documentos, hacer cálculos y jugar. También permitió que muchas más personas comenzaran a aprender informática.</p>
+                
+                <button onclick="abrirDatoCurioso('dato2')">📚 Ver dato curioso</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERACIÓN 3 -->
+    <div class="generacion">
+        <h3>🖥️ Tercera Generación: Multimedia e Internet <span>(1990 - 1999)</span></h3>
+        <div class="contenido-gen">
+            <img src="./imagenes/imac_bondi_blue.jpg" alt="Tercera Generación">
+            <div class="texto-gen">
+                <p>Durante los años 90 las computadoras personales tuvieron un gran crecimiento tecnológico. Los procesadores aumentaron considerablemente su velocidad y los discos duros permitieron guardar mucha más información.</p>
+                <p>También aparecieron computadores preparados para trabajar con <strong>imágenes, sonidos, videos y videojuegos</strong>. Por esta razón se empezó a hablar de computadores <strong>multimedia</strong>.</p>
+                
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>🔹 Procesadores más rápidos</li>
+                    <li>🔹 Mayor capacidad de memoria RAM</li>
+                    <li>🔹 Discos duros de mayor capacidad</li>
+                    <li>🔹 Monitores a color</li>
+                    <li>🔹 Mejores tarjetas gráficas</li>
+                    <li>🔹 Tarjetas de sonido</li>
+                    <li>🔹 Lectores de CD-ROM</li>
+                    <li>🔹 Mayor calidad en videojuegos</li>
+                    <li>🔹 Programas multimedia</li>
+                    <li>🔹 Expansión de Internet</li>
+                    <li>🔹 Sistemas operativos con interfaces gráficas más completas</li>
+                </ul>
+                
+                <p><strong>Procesadores importantes:</strong> Intel 386, 486 y Pentium.</p>
+                <p><strong>Sistemas operativos:</strong> Windows 95 (1995) y Windows 98.</p>
+                
+                <p><strong>¿Qué aportó esta generación?</strong> El computador pasó a ser una herramienta para trabajo, educación, comunicación, entretenimiento y acceso a información. La llegada de Internet y los CD-ROM permitió almacenar y consultar grandes cantidades de información.</p>
+                
+                <button onclick="abrirDatoCurioso('dato3')">📚 Ver dato curioso</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERACIÓN 4 -->
+    <div class="generacion">
+        <h3>🖥️ Cuarta Generación: Computadores más rápidos y conectados <span>(2000 - 2010)</span></h3>
+        <div class="contenido-gen">
+            <img src="./imagenes/macbook-pro.webp" alt="Cuarta Generación">
+            <div class="texto-gen">
+                <p>Durante los primeros años del siglo XXI, las computadoras personales continuaron aumentando su capacidad. Los procesadores comenzaron a incorporar <strong>varios núcleos</strong>, permitiendo realizar diferentes tareas con mayor eficiencia.</p>
+                <p>También se hicieron cada vez más comunes los <strong>computadores portátiles</strong>, que permiten trabajar y estudiar sin estar siempre conectados a un escritorio. La conexión a Internet evolucionó con las <strong>redes inalámbricas (Wi-Fi)</strong>.</p>
+                
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>🔹 Procesadores multinúcleo</li>
+                    <li>🔹 Mayor cantidad de memoria RAM</li>
+                    <li>🔹 Discos duros con mucha más capacidad</li>
+                    <li>🔹 Aparición y expansión de los SSD</li>
+                    <li>🔹 Pantallas LCD</li>
+                    <li>🔹 Computadores portátiles</li>
+                    <li>🔹 Conexiones Wi-Fi</li>
+                    <li>🔹 Bluetooth</li>
+                    <li>🔹 Mejores tarjetas gráficas</li>
+                    <li>🔹 Internet de mayor velocidad</li>
+                    <li>🔹 Mayor cantidad de programas y servicios en línea</li>
+                </ul>
+                
+                <p><strong>¿Qué desarrollaron?</strong> Cámaras web, memorias USB, servicios de almacenamiento y aplicaciones en Internet, smartphones cada vez más avanzados.</p>
+                
+                <p><strong>¿Qué aportó esta generación?</strong> La computadora se convirtió en una herramienta <strong>móvil y conectada</strong>. Se utilizó cada vez más para estudiar, trabajar, comunicarse, compartir archivos, utilizar redes sociales y acceder a servicios por Internet.</p>
+                
+                <button onclick="abrirDatoCurioso('dato4')">📚 Ver dato curioso</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERACIÓN 5 -->
+    <div class="generacion">
+        <h3>🖥️ Quinta Generación: Inteligencia artificial y computación inteligente <span>(2010 - actualidad)</span></h3>
+        <div class="contenido-gen">
+            <img src="./imagenes/microsoft_surface_pro.webp" alt="Quinta Generación">
+            <div class="texto-gen">
+                <p>La quinta generación representa la etapa actual de la evolución de los computadores. No existe una fecha única y oficial para el comienzo de esta generación, pero se caracteriza por tecnologías como la <strong>inteligencia artificial, computación en la nube, aprendizaje automático e Internet de las cosas</strong>.</p>
+                <p>Los computadores actuales pueden procesar enormes cantidades de información y realizar tareas que anteriormente requerían mucha intervención humana.</p>
+                
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>🔹 Procesadores de gran capacidad</li>
+                    <li>🔹 Grandes cantidades de memoria y almacenamiento</li>
+                    <li>🔹 Inteligencia artificial</li>
+                    <li>🔹 Aprendizaje automático</li>
+                    <li>🔹 Computación en la nube</li>
+                    <li>🔹 Internet de alta velocidad</li>
+                    <li>🔹 Dispositivos inteligentes</li>
+                    <li>🔹 Reconocimiento de voz</li>
+                    <li>🔹 Reconocimiento de imágenes</li>
+                    <li>🔹 Automatización de tareas</li>
+                    <li>🔹 Procesadores especializados para inteligencia artificial</li>
+                    <li>🔹 Integración entre computadores, celulares y otros dispositivos</li>
+                </ul>
+                
+                <p><strong>¿Qué se ha desarrollado?</strong></p>
+                <ul>
+                    <li>🧠 <strong>Inteligencia artificial:</strong> Sistemas capaces de analizar información y generar respuestas.</li>
+                    <li>🗣️ <strong>Asistentes virtuales:</strong> Sistemas que responden preguntas y reconocen comandos de voz.</li>
+                    <li>☁️ <strong>Computación en la nube:</strong> Permite almacenar y usar información mediante Internet.</li>
+                    <li>🌐 <strong>Internet de las cosas (IoT):</strong> Conecta objetos y dispositivos a Internet.</li>
+                    <li>⚙️ <strong>Procesadores para IA:</strong> Chips diseñados para tareas de inteligencia artificial.</li>
+                </ul>
+                
+                <p><strong>¿Qué aportó esta generación?</strong> La computadora pasó de ser solamente una máquina que ejecuta instrucciones a convertirse en una herramienta capaz de analizar información, reconocer patrones, automatizar tareas y trabajar con inteligencia artificial.</p>
+                
+                <button onclick="abrirDatoCurioso('dato5')">📚 Ver dato curioso</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLA COMPARATIVA -->
+    <div class="tabla-comparativa">
+        <h3>📊 Comparación de las Generaciones</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Generación</th>
+                    <th>Periodo</th>
+                    <th>Tecnología destacada</th>
+                    <th>¿Qué aportó?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Primera</strong></td>
+                    <td>1970-1979</td>
+                    <td>Microprocesadores</td>
+                    <td>Nacimiento de la computadora personal</td>
+                </tr>
+                <tr>
+                    <td><strong>Segunda</strong></td>
+                    <td>1980-1989</td>
+                    <td>PC y sistemas operativos</td>
+                    <td>Popularización de los computadores</td>
+                </tr>
+                <tr>
+                    <td><strong>Tercera</strong></td>
+                    <td>1990-1999</td>
+                    <td>Multimedia e Internet</td>
+                    <td>Computadores para comunicación y entretenimiento</td>
+                </tr>
+                <tr>
+                    <td><strong>Cuarta</strong></td>
+                    <td>2000-2010</td>
+                    <td>Multinúcleo, Wi-Fi y portátiles</td>
+                    <td>Computación más rápida, móvil y conectada</td>
+                </tr>
+                <tr>
+                    <td><strong>Quinta</strong></td>
+                    <td>2010-actualidad</td>
+                    <td>IA, nube e IoT</td>
+                    <td>Computación inteligente y automatización</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- LÍNEA DE TIEMPO -->
+    <div class="linea-tiempo-evolucion">
+        <h3>📈 Evolución en una sola línea</h3>
+        <p class="frase-evolucion">
+            Microprocesador → Computadora personal → Sistemas operativos → Multimedia → Internet → Portátiles → Wi-Fi → Smartphones → Nube → Inteligencia artificial
+        </p>
+    </div>
+</section>
+
         <!-- ========================================= -->
-
-        <!-- GENERACIÓN 1 -->
-        <section id="gen1" class="generacion">
-            <h2>🖥️ Primera Generación <span>(1971 - 1980)</span></h2>
-            <div class="contenido-gen">
-                <img src="./imagenes/IBM5100.jpg" alt="IBM 5100">
-                <div class="texto-gen">
-                    <p>Las primeras computadoras personales eran grandes, costosas y tenían poca capacidad de almacenamiento. Eran usadas principalmente por empresas y universidades.</p>
-                    <ul>
-                        <li><strong>Características:</strong></li>
-                        <li>🔹 Usaban cintas magnéticas</li>
-                        <li>🔹 Tenían pantallas pequeñas</li>
-                        <li>🔹 Solo expertos podían usarlas</li>
-                    </ul>
-                    <button onclick="mostrarInfo('info1')">📚 Ver dato curioso</button>
-                    <div id="info1" class="info-extra" style="display:none;">
-                        💡 <strong>¡Sabías que!</strong> La IBM 5100 pesaba 25 kg y costaba alrededor de $20,000 dólares.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GENERACIÓN 2 -->
-        <section id="gen2" class="generacion">
-            <h2>🖥️ Segunda Generación <span>(1981 - 1990)</span></h2>
-            <div class="contenido-gen">
-                <img src="./imagenes/IBM5150.jpg" alt="IBM PC 5150">
-                <div class="texto-gen">
-                    <p>Aparecen las primeras PC con sistema operativo MS-DOS y el mouse. Se populariza el uso de computadores en oficinas y hogares.</p>
-                    <ul>
-                        <li><strong>Características:</strong></li>
-                        <li>🔹 Primeros discos duros</li>
-                        <li>🔹 Teclado y mouse básicos</li>
-                        <li>🔹 Mayor almacenamiento</li>
-                    </ul>
-                    <button onclick="mostrarInfo('info2')">📚 Ver dato curioso</button>
-                    <div id="info2" class="info-extra" style="display:none;">
-                        💡 <strong>¡Sabías que!</strong> El IBM PC 5150 de 1981 costaba $1,565 dólares y tenía solo 16KB de memoria RAM.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GENERACIÓN 3 -->
-        <section id="gen3" class="generacion">
-            <h2>🖥️ Tercera Generación <span>(1991 - 2000)</span></h2>
-            <div class="contenido-gen">
-                <img src="./imagenes/imac_bondi_blue.jpg" alt="iMac G3">
-                <div class="texto-gen">
-                    <p>Llega la era de Windows 95, Internet y los CD-ROM. Las PC se vuelven más coloridas, rápidas y accesibles para el público general.</p>
-                    <ul>
-                        <li><strong>Características:</strong></li>
-                        <li>🔹 Procesadores más rápidos</li>
-                        <li>🔹 Gráficos mejorados</li>
-                        <li>🔹 Conexión a Internet</li>
-                    </ul>
-                    <button onclick="mostrarInfo('info3')">📚 Ver dato curioso</button>
-                    <div id="info3" class="info-extra" style="display:none;">
-                        💡 <strong>¡Sabías que!</strong> El iMac G3 de 1998 fue el primer computador en tener colores llamativos y vendió más de 6 millones de unidades.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GENERACIÓN 4 -->
-        <section id="gen4" class="generacion">
-            <h2>🖥️ Cuarta Generación <span>(2001 - 2010)</span></h2>
-            <div class="contenido-gen">
-                <img src="./imagenes/macbook-pro.webp" alt="MacBook Pro">
-                <div class="texto-gen">
-                    <p>Aparecen las laptops, WiFi, redes sociales y el almacenamiento en la nube. Las PC se vuelven portátiles y más potentes.</p>
-                    <ul>
-                        <li><strong>Características:</strong></li>
-                        <li>🔹 Computadores portátiles</li>
-                        <li>🔹 Conexión inalámbrica</li>
-                        <li>🔹 Mayor capacidad de almacenamiento</li>
-                    </ul>
-                    <button onclick="mostrarInfo('info4')">📚 Ver dato curioso</button>
-                    <div id="info4" class="info-extra" style="display:none;">
-                        💡 <strong>¡Sabías que!</strong> El primer MacBook Pro de 2006 era tan potente que se usaba para editar películas de Hollywood.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GENERACIÓN 5 -->
-        <section id="gen5" class="generacion">
-            <h2>🖥️ Quinta Generación <span>(2011 - actualidad)</span></h2>
-            <div class="contenido-gen">
-                <img src="./imagenes/microsoft_surface_pro.webp" alt="Microsoft Surface">
-                <div class="texto-gen">
-                    <p>La era de las tabletas, pantallas táctiles, inteligencia artificial y computación en la nube. Las PC son ultrafinas y potentes.</p>
-                    <ul>
-                        <li><strong>Características:</strong></li>
-                        <li>🔹 Pantallas táctiles</li>
-                        <li>🔹 Reconocimiento de voz</li>
-                        <li>🔹 Inteligencia artificial</li>
-                    </ul>
-                    <button onclick="mostrarInfo('info5')">📚 Ver dato curioso</button>
-                    <div id="info5" class="info-extra" style="display:none;">
-                        💡 <strong>¡Sabías que!</strong> Hoy en día, un teléfono inteligente tiene más poder de cómputo que el computador que llevó al hombre a la Luna en 1969.
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- PESTAÑA 3: JUEGOS (7 juegos)               -->
         <!-- ========================================= -->
-        <!-- SECCIÓN 5: JUEGOS (3 juegos)               -->
-        <!-- ========================================= -->
-        <section id="juegos" class="juegos">
+        <section id="tab-juegos" class="pestana">
             <h2>🎮 ZONA DE JUEGOS</h2>
-            <p class="instruccion-juegos">Pon a prueba lo que aprendiste con estos 3 juegos:</p>
+            <p class="instruccion-juegos">Pon a prueba lo que aprendiste con estos 7 juegos:</p>
 
-            <!-- JUEGO 1: ASOCIA LA CARACTERÍSTICA -->
+            <!-- JUEGO 1: PREGUNTAS DIFÍCILES -->
             <div class="juego-contenedor">
-                <h3>🎯 Juego 1: Asocia la característica</h3>
+                <h3>🎯 Juego 1: Asocia la característica (Nivel Difícil)</h3>
                 <p>Une cada característica con su generación correcta:</p>
                 <div id="preguntas-juego1"></div>
                 <div class="botones-juego">
@@ -181,9 +311,9 @@
                 <div id="resultado-juego1" class="resultado"></div>
             </div>
 
-            <!-- JUEGO 2: ADIVINA EL AÑO -->
+            <!-- JUEGO 2: PREGUNTAS DIFÍCILES -->
             <div class="juego-contenedor">
-                <h3>❓ Juego 2: Adivina el año</h3>
+                <h3>❓ Juego 2: Adivina el año (Nivel Difícil)</h3>
                 <p>¿En qué generación ocurrió cada avance?</p>
                 <div id="preguntas-juego2"></div>
                 <div class="botones-juego">
@@ -193,7 +323,7 @@
                 <div id="resultado-juego2" class="resultado"></div>
             </div>
 
-            <!-- JUEGO 3: MEMORIA DE LAS PC -->
+            <!-- JUEGO 3: MEMORIA -->
             <div class="juego-contenedor">
                 <h3>🧠 Juego 3: Memoria de las PC</h3>
                 <p>Encuentra las parejas de conceptos relacionados:</p>
@@ -204,17 +334,17 @@
                 <div id="resultado-memoria" class="resultado"></div>
             </div>
 
-            <!-- JUEGO 4: ROMPECHEZAS -->
+            <!-- JUEGO 4: ROMPECABEZAS -->
             <div class="juego-contenedor">
                 <h3>🧩 Juego 4: Rompecabezas de imágenes</h3>
-                <p>Haz clic en dos piezas para intercambiarlas y armar la imagen del computador:</p>
+                <p>Haz clic en dos piezas para intercambiarlas y armar la imagen:</p>
                 <div id="rompecabezas" class="rompecabezas"></div>
                 <div class="botones-juego">
                     <button onclick="reiniciarRompecabezas()">🔄 Reiniciar</button>
                 </div>
                 <div id="resultado-rompecabezas" class="resultado"></div>
             </div>
-            
+
             <!-- JUEGO 5: CONECTA LAS PAREJAS -->
             <div class="juego-contenedor">
                 <h3>🔗 Juego 5: Conecta las parejas</h3>
@@ -225,33 +355,121 @@
                 </div>
                 <div id="resultado-conecta" class="resultado"></div>
             </div>
+
+            <!-- JUEGO 6: SOPA DE LETRAS -->
+            <div class="juego-contenedor">
+                <h3>🔤 Juego 6: Sopa de letras</h3>
+                <p>Encuentra las palabras relacionadas con la historia de las PC:</p>
+                <div id="palabras-buscar" class="palabras-buscar"></div>  <!-- 👈 AGREGA ESTA LÍNEA -->
+
+                <div id="sopa-letras" class="sopa-letras"></div>
+                <div class="botones-juego">
+                    <button onclick="reiniciarSopa()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-sopa" class="resultado"></div>
+            </div>
+
+            <!-- JUEGO 7: ORDENA LA LÍNEA DE TIEMPO -->
+            <div class="juego-contenedor">
+                <h3>📅 Juego 7: Ordena la línea de tiempo</h3>
+                <p>Arrastra los eventos para ordenarlos cronológicamente:</p>
+                <div id="linea-tiempo-juego" class="linea-tiempo-juego"></div>
+                <div class="botones-juego">
+                    <button onclick="verificarLineaTiempo()">✅ Verificar</button>
+                    <button onclick="reiniciarLineaTiempo()">🔄 Reiniciar</button>
+                </div>
+                <div id="resultado-linea" class="resultado"></div>
+            </div>
         </section>
 
         <!-- ========================================= -->
-        <!-- SECCIÓN 6: ESPACIO DOCENTE                -->
+        <!-- PESTAÑA 4: DATOS CURIOSOS                  -->
         <!-- ========================================= -->
-        <section id="docente" class="docente">
+        <section id="tab-datos" class="pestana">
+            <h2>📚 Datos Curiosos de la Historia de las PC</h2>
+            <div class="lista-datos">
+                <div class="dato-curioso">
+                    <h3>💡 Dato 1: El IBM 5100</h3>
+                    <p>La IBM 5100 pesaba 25 kg y costaba alrededor de $20,000 dólares. ¡Era tan grande que necesitaba una mesa especial!</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 2: El IBM PC 5150</h3>
+                    <p>El IBM PC 5150 de 1981 costaba $1,565 dólares y tenía solo 16KB de memoria RAM. ¡Hoy un solo correo electrónico pesa más que eso!</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 3: El iMac G3</h3>
+                    <p>El iMac G3 de 1998 fue el primer computador en tener colores llamativos y vendió más de 6 millones de unidades. Fue diseñado por Steve Jobs.</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 4: El MacBook Pro</h3>
+                    <p>El primer MacBook Pro de 2006 era tan potente que se usaba para editar películas de Hollywood. Tenía una cámara integrada revolucionaria.</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 5: La Quinta Generación</h3>
+                    <p>Hoy en día, un teléfono inteligente tiene más poder de cómputo que el computador que llevó al hombre a la Luna en 1969.</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 6: El primer mouse</h3>
+                    <p>El primer mouse fue inventado por Douglas Engelbart en 1964. Estaba hecho de madera y tenía solo una rueda.</p>
+                </div>
+                <div class="dato-curioso">
+                    <h3>💡 Dato 7: El primer disco duro</h3>
+                    <p>El primer disco duro de IBM (1956) pesaba una tonelada y almacenaba solo 5 MB. ¡Hoy un pendrive de 5 MB no existe!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- PESTAÑA 5: DOCENTE                         -->
+        <!-- ========================================= -->
+        <section id="tab-docente" class="pestana">
             <h2>👨‍🏫 Guía para el docente</h2>
             <div class="guia">
                 <h3>¿Cómo usar este museo digital en clase?</h3>
                 <ol>
-                    <li><strong>Exploración libre (15 min):</strong> Deja que los estudiantes naveguen por las generaciones a su propio ritmo.</li>
-                    <li><strong>Juegos interactivos (15 min):</strong> Pide que jueguen en parejas o grupos para reforzar lo aprendido.</li>
-                    <li><strong>Actividad en clase (10 min):</strong> Que dibujen cómo creen que serán las PC del futuro.</li>
+                    <li><strong>Exploración libre (15 min):</strong> Deja que los estudiantes naveguen por las pestañas de generaciones a su propio ritmo.</li>
+                    <li><strong>Juegos interactivos (20 min):</strong> Pide que jueguen en parejas o grupos con los 7 juegos disponibles.</li>
+                    <li><strong>Datos curiosos (5 min):</strong> Que lean los datos curiosos y compartan el que más les llamó la atención.</li>
+                    <li><strong>Actividad en clase (15 min):</strong> Que dibujen cómo creen que serán las PC del futuro.</li>
                 </ol>
                 <p><strong>Objetivos de aprendizaje:</strong></p>
                 <ul>
                     <li>✅ Reconocer la evolución de las computadoras personales</li>
                     <li>✅ Identificar avances tecnológicos clave</li>
                     <li>✅ Relacionar tecnología del pasado con la actual</li>
+                    <li>✅ Desarrollar pensamiento crítico sobre la tecnología</li>
                 </ul>
+                <p><strong>Competencias que se desarrollan:</strong></p>
+                <ul>
+                    <li>🧠 Memoria visual (juego de memoria)</li>
+                    <li>🔗 Asociación de conceptos (conecta parejas)</li>
+                    <li>📅 Comprensión temporal (línea de tiempo)</li>
+                    <li>🔤 Vocabulario técnico (sopa de letras)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- PESTAÑA 6: ACERCA DE                       -->
+        <!-- ========================================= -->
+        <section id="tab-acerca" class="pestana">
+            <h2>ℹ️ Acerca del Proyecto</h2>
+            <div class="acerca">
+                <p><strong>Proyecto:</strong> Museo Digital - Historia de las Computadoras Personales</p>
+                <p><strong>Institución:</strong> Institución Educativa Técnica de Firavitoba</p>
+                <p><strong>Programa:</strong> Técnicos en Sistemas Teleinformáticos</p>
+                <p><strong>Autores:</strong> Alejandro Barrera Riveros y José de Jesús Martínez Santiago</p>
+                <p><strong>Director:</strong> Ing. Francisco Orduz Latorre</p>
+                <p><strong>Año:</strong> 2026</p>
+                <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
+                <p><strong>Dirigido a:</strong> Estudiantes de grado quinto de primaria</p>
             </div>
         </section>
 
     </main>
 
     <!-- ========================================= -->
-    <!-- SECCIÓN 7: FOOTER (Pie de página)          -->
+    <!-- FOOTER                                     -->
     <!-- ========================================= -->
     <footer>
         <p>Proyecto de Grado - Técnicos en Sistemas Teleinformáticos</p>
