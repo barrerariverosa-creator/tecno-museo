@@ -13,8 +13,7 @@ function cambiarPestana(nombrePestana, boton) {
 // FUNCIÓN 2: Abrir dato curioso en nueva pestaña
 // ===============================================
 function abrirDatoCurioso(id) {
-    let ventana = window.open('', '_blank', 'width=500,height=400');
-    ventana.document.write(`
+    let ventana = window.open('', '_blank');    ventana.document.write(`
         <!DOCTYPE html>
         <html lang="es">
         <head>

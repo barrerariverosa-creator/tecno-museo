@@ -21,7 +21,7 @@ header {
     background: linear-gradient(135deg, #1a2a3a, #2c3e50);
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;   /* ← antes era 3rem, ahora 1.5rem */
 }
 
 header h1 {
@@ -29,9 +29,16 @@ header h1 {
     letter-spacing: 2px;
 }
 
+header img {
+    display: block;
+    width: 50%;           /* ← 50% del ancho del header */
+    max-width: 300px;     /* ← límite para que no se vea gigante */
+    margin: 1rem auto;    /* ← centrada horizontalmente */
+}
+
 header .subtitulo {
     font-size: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0px;
     color: #ecf0f1;
 }
 
@@ -279,9 +286,7 @@ button:hover {
     list-style: none;
 }
 
-.guia ul li::before {
-    content: "✅ ";
-}
+
 
 /* ========================================== */
 /* SECCIÓN FOOTER (Pie de página)            */
@@ -839,9 +844,7 @@ nav#menu-pestanas {
 /* ========================================== */
 /* AJUSTES AL HEADER (sin imagen)             */
 /* ========================================== */
-header img {
-    display: none; /* Ocultamos la imagen del header */
-}
+
 
 /* ========================================== */
 /* TABLA COMPARATIVA                         */
@@ -911,4 +914,42 @@ header img {
     line-height: 1.8;
     color: #1a2a3a;
     font-weight: 500;
+}
+
+/* ========================================== */
+/* SOPA DE LETRAS - PALABRAS A BUSCAR        */
+/* ========================================== */
+.palabras-buscar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.palabra-buscar {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid #4a6278;
+    transition: background 0.3s, transform 0.2s;
+    user-select: none;
+}
+
+.palabra-buscar:hover {
+    background: #3d566e;
+    transform: scale(1.05);
+}
+
+.palabra-buscar.encontrada {
+    background: #2ecc71;
+    color: white;
+    text-decoration: line-through;
+    opacity: 0.8;
+    border-color: #27ae60;
 }
