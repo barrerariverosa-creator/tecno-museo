@@ -53,19 +53,69 @@ function abrirDatoCurioso(id) {
 function obtenerContenidoDato(id) {
     const datos = {
         dato1: `<h1>💡 Dato Curioso: Altair 8800</h1>
-                <p>El Altair 8800 (1975) se vendía como un kit que el usuario debía ensamblar.</p>
-                <p>No tenía monitor ni teclado: se conectaba a un televisor.</p>`,
+                <p>El Altair 8800 (1975) se vendía como un kit que el usuario debía ensamblar. No tenía monitor ni teclado: se conectaba a un televisor.</p>
+                <hr style="margin: 1.5rem 0; border: 1px solid #f1c40f;">
+                <h3 style="color: #b7950b; text-align: left; margin-bottom: 1rem;">Más sobre la Primera Generación</h3>
+                <ul style="text-align: left; line-height: 1.6; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 1.1rem;">
+                    <li><strong>El nacimiento del microprocesador:</strong> En 1971, Intel presentó el 4004, uno de los primeros microprocesadores comerciales. Este avance permitió integrar funciones de procesamiento en un pequeño chip.</li>
+                    <li><strong>Computadoras para armar:</strong> Algunos computadores, como el Altair 8800, se vendían en forma de kits que los compradores debían ensamblar para poder utilizarlos.</li>
+                    <li><strong>No todas tenían pantalla:</strong> Algunos equipos utilizaban luces y pequeños interruptores para introducir instrucciones y mostrar resultados.</li>
+                    <li><strong>El Apple I era diferente:</strong> En 1976, Steve Wozniak diseñó el Apple I, que se comercializaba principalmente como una placa electrónica y necesitaba otros componentes para funcionar como un sistema completo.</li>
+                    <li><strong>Los televisores servían como monitores:</strong> Algunos computadores personales podían conectarse a un televisor para mostrar letras y gráficos.</li>
+                    <li><strong>La programación era una habilidad importante:</strong> Los aficionados aprendían lenguajes como BASIC para crear programas, realizar cálculos y desarrollar videojuegos sencillos.</li>
+                </ul>`,
+        
         dato2: `<h1>💡 Dato Curioso: IBM PC</h1>
-                <p>El IBM PC de 1981 se convirtió en el estándar de la industria.</p>
-                <p>Gracias a él aparecieron los "PC compatibles".</p>`,
+                <p>El IBM PC de 1981 se convirtió en el estándar de la industria. Gracias a él aparecieron los "PC compatibles".</p>
+                <hr style="margin: 1.5rem 0; border: 1px solid #f1c40f;">
+                <h3 style="color: #b7950b; text-align: left; margin-bottom: 1rem;">Más sobre la Segunda Generación</h3>
+                <ul style="text-align: left; line-height: 1.6; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 1.1rem;">
+                    <li><strong>IBM lanzó su famoso PC:</strong> En 1981, IBM presentó el IBM PC, que ayudó a impulsar el mercado de las computadoras personales y los equipos compatibles.</li>
+                    <li><strong>Los disquetes guardaban información:</strong> Estos pequeños discos permitían guardar documentos y programas, y transportarlos de una computadora a otra.</li>
+                    <li><strong>Aparecieron mejores videojuegos:</strong> Los avances en sonido y gráficos permitieron desarrollar videojuegos más interesantes para los hogares.</li>
+                    <li><strong>El Macintosh popularizó el mouse:</strong> En 1984, Apple presentó el Macintosh, que facilitaba el manejo de la computadora mediante ventanas, iconos y un ratón.</li>
+                    <li><strong>Los computadores llegaron a más colegios:</strong> Las instituciones educativas comenzaron a incorporar equipos para enseñar programación, matemáticas y otras materias.</li>
+                    <li><strong>El computador se convirtió en una herramienta de oficina:</strong> Programas de escritura y hojas de cálculo facilitaron la elaboración de cartas, informes, cuentas y documentos empresariales.</li>
+                </ul>`,
+        
         dato3: `<h1>💡 Dato Curioso: Windows 95</h1>
-                <p>Windows 95 fue uno de los sistemas operativos más populares de la historia.</p>
-                <p>Introdujo el menú de inicio y la barra de tareas como los conocemos hoy.</p>`,
+                <p>Windows 95 fue uno de los sistemas operativos más populares de la historia. Introdujo el menú de inicio y la barra de tareas como los conocemos hoy.</p>
+                <hr style="margin: 1.5rem 0; border: 1px solid #f1c40f;">
+                <h3 style="color: #b7950b; text-align: left; margin-bottom: 1rem;">Más sobre la Tercera Generación</h3>
+                <ul style="text-align: left; line-height: 1.6; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 1.1rem;">
+                    <li><strong>Los computadores se volvieron multimedia:</strong> Podían reproducir sonidos, mostrar imágenes y ejecutar programas con diferentes tipos de contenido.</li>
+                    <li><strong>Los CD-ROM almacenaban mucha información:</strong> Estos discos permitían guardar enciclopedias, programas educativos, música y videojuegos con más capacidad que muchos disquetes.</li>
+                    <li><strong>Windows 95 cambió su manejo:</strong> Su lanzamiento en 1995 popularizó elementos como el menú Inicio y la barra de tareas.</li>
+                    <li><strong>Internet comenzó a llegar a los hogares:</strong> Durante los años noventa, cada vez más personas empezaron a utilizar Internet para buscar información y comunicarse.</li>
+                    <li><strong>Los videojuegos mejoraron sus gráficos:</strong> Los avances en los procesadores y las tarjetas gráficas permitieron crear juegos con escenarios tridimensionales y experiencias más complejas.</li>
+                    <li><strong>Los computadores tenían discos duros más grandes:</strong> Esto permitió almacenar miles de documentos, fotografías, programas y otros archivos digitales, dependiendo de la capacidad del equipo.</li>
+                </ul>`,
+        
         dato4: `<h1>💡 Dato Curioso: Cuarta Generación</h1>
-                <p>En esta época aparecieron los SSD (discos de estado sólido) y el Wi-Fi.</p>
-                <p>Las laptops se volvieron el estándar para estudiar y trabajar.</p>`,
+                <p>En esta época aparecieron los SSD (discos de estado sólido) y el Wi-Fi. Las laptops se volvieron el estándar para estudiar y trabajar.</p>
+                <hr style="margin: 1.5rem 0; border: 1px solid #f1c40f;">
+                <h3 style="color: #b7950b; text-align: left; margin-bottom: 1rem;">Más sobre la Cuarta Generación</h3>
+                <ul style="text-align: left; line-height: 1.6; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 1.1rem;">
+                    <li><strong>Los procesadores comenzaron a tener varios núcleos:</strong> Esto permitió que los computadores realizaran distintas tareas con mayor eficiencia.</li>
+                    <li><strong>Los portátiles se hicieron más comunes:</strong> Las personas podían llevar sus computadores al colegio, al trabajo o de viaje sin depender de un equipo de escritorio.</li>
+                    <li><strong>Las memorias USB reemplazaron muchos disquetes:</strong> Estos dispositivos pequeños permitían guardar y transportar archivos de manera práctica.</li>
+                    <li><strong>El Wi-Fi facilitó la conexión a Internet:</strong> Los computadores podían conectarse a redes inalámbricas sin necesitar un cable de red en cada equipo.</li>
+                    <li><strong>Las pantallas LCD ganaron popularidad:</strong> Estas pantallas eran más delgadas y ligeras que muchos monitores antiguos de tubo.</li>
+                    <li><strong>Los servicios en línea crecieron rápidamente:</strong> El correo electrónico, las redes sociales, las videollamadas y las páginas web cambiaron la manera de estudiar, trabajar y comunicarse.</li>
+                </ul>`,
+        
         dato5: `<h1>💡 Dato Curioso: Quinta Generación</h1>
-                <p>Hoy un teléfono inteligente tiene más poder de cómputo que el computador que llevó al hombre a la Luna en 1969.</p>`
+                <p>Hoy un teléfono inteligente tiene más poder de cómputo que el computador que llevó al hombre a la Luna en 1969.</p>
+                <hr style="margin: 1.5rem 0; border: 1px solid #f1c40f;">
+                <h3 style="color: #b7950b; text-align: left; margin-bottom: 1rem;">Más sobre la Quinta Generación</h3>
+                <ul style="text-align: left; line-height: 1.6; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 1.1rem;">
+                    <li><strong>La inteligencia artificial se volvió más accesible:</strong> Actualmente existen herramientas que pueden responder preguntas, resumir textos, traducir idiomas y ayudar a resolver problemas.</li>
+                    <li><strong>Los computadores pueden reconocer la voz:</strong> Algunos programas interpretan las palabras de los usuarios para realizar búsquedas, escribir textos o ejecutar instrucciones.</li>
+                    <li><strong>Los discos SSD mejoraron la velocidad:</strong> Estos dispositivos de almacenamiento permiten iniciar el sistema operativo y abrir muchos programas más rápidamente que los discos duros tradicionales.</li>
+                    <li><strong>La nube permite guardar archivos en Internet:</strong> Servicios digitales permiten almacenar fotografías, documentos y trabajos para acceder a ellos desde diferentes dispositivos.</li>
+                    <li><strong>Las tarjetas gráficas también ayudan con la inteligencia artificial:</strong> Además de crear imágenes y ejecutar videojuegos, algunas pueden realizar cálculos útiles para entrenar y ejecutar modelos de inteligencia artificial.</li>
+                    <li><strong>Los computadores son cada vez más potentes y eficientes:</strong> Los avances en procesadores, memoria y software permiten realizar actividades como edición de video, diseño 3D, investigación científica y desarrollo de sistemas inteligentes.</li>
+                </ul>`
     };
     return datos[id] || '<h1>Dato no encontrado</h1>';
 }
